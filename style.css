@@ -1,0 +1,293 @@
+body
+{
+    font-family: 'Monserrat', sans-serif;
+    margin: 0;
+    background-color: black;
+    color: white;
+    overflow: auto;/* this is basically used to hide the content which does not fix in the page so the content that overflows out of the page is hidden without providing a scrollbar */
+}
+.main
+{
+    display: flex;
+    height: 100vh;/* vh means 100% of length same as the screen*/
+    padding: 0.5rem;
+   
+}
+.sidebar
+{
+    background-color:black ;
+    width: 340px;
+    border-radius: 1rem;/* 1rem=16px which gives curved edges */
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}
+.main-content
+{
+    background-color:  #121212;
+    flex: 1;/*flex 1 means that all the divs that are assigned any width is okay but remaining width that remains after giving the values that all remining width should be assigned to the main content part  */
+    border-radius: 1rem;/*16px*/
+    overflow: auto;
+    padding: 0 1.5rem 0 1.5rem;
+}
+.music-player {
+    background-color:#282828;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 72px;
+    display: flex; /* Combine all properties here */
+    justify-content: space-between; /* Distribute space between child elements */
+    z-index: 10; /* Ensure it stays on top */
+    padding: 0;
+    left:0;
+    align-items: center;
+}
+
+a
+{
+    text-decoration: none;
+    color: white;
+
+}
+.nav
+{
+    background-color: #121212;
+    border-radius: 1rem;
+    display: flex;/* this makes the home and search to come in one line*/
+    flex-direction: column;/*with this help we can make the home and search come one below other */
+    justify-content: center;/*makes the content horizontally at center*/
+    height: 100px;
+    padding: 0.5rem 0.75rem;/*the padding we have given in rem to make it more responsive*/
+}
+.navoption
+{
+    opacity: 0.7;
+    line-height: 2.5rem;/*to maintain some space between search and home*/
+    padding: 0.5rem 0.75rem;
+}
+.navoption:hover/*here when we take the mouse on the home or search it gets bright */
+{
+    opacity: 1;
+}
+.navoption i
+{
+    font-size: 1.25rem;/*heigth of the icon */
+
+}
+.navoption a
+{
+    font-size: 1rem;/* size of the text*/
+    margin-left: 1rem;
+
+}
+.library
+{
+    background-color: #121212;
+    border-radius: 1rem;
+    height: 100%;
+    margin-top: 0.5rem;
+    padding: 0.5rem 0.75rem;
+}
+.options
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.liboptions img
+{
+    height: 1.25rem;
+    width: 1.25rem ;
+}
+.icons
+{
+    font-size: 1.25rem;
+    display: flex;
+}
+.icons i
+{
+    opacity: 0.7;
+    margin-right: 1rem;
+}
+.icons i:hover
+{
+    opacity: 1;
+}
+.box
+{
+    background-color: #232323;/*light grey*/
+    height: 8rem;
+    border-radius: 1rem;
+    margin: 0.75rem 0 1.75rem 0;
+    padding: 0.5rem 1.25rem;   
+}
+.box-p1
+{
+    font-size: 1rem;
+    font-weight:600;
+}
+.box-p2
+{
+    font-size: 0.8rem;
+    opacity: 0.8;
+}
+.badge
+{
+    background-color: white;
+    border: none;
+    border-radius: 100px;/*to make the button round*/
+    padding: 0.25rem 1rem;
+    font-weight: 700;
+    margin-top: 0.5rem;
+    height: 2rem;
+    width: fit-content;
+}
+.stickynav
+{
+    position: sticky;/*which navbar sticks to the page even if we scroll down the page*/
+    top: 0;
+    background-color: #121212;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0 1rem 0;
+    z-index: 10;/*this is used cuz when we scroll the content of page was overlapping in the navbar so byy setting the zindex to a positive value the content of the page gets hidden below the sticky nav*/
+}
+.navleft
+{
+    margin-left: 0.75rem;
+}
+.navright
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navitem
+{
+    margin-right: 1.5rem;
+    color: white;
+}
+@media(maxwidth: 1000px)/*this is used when the isze of the screen is less than 1000px then the forward button  and the explore premium button will get disappered*/
+{
+    .hide
+    {
+        display: none;
+    }
+    
+}
+.card
+{
+    background-color: #232323;
+    width: 150px;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin-left: 1.5rem;
+    margin-top: 1rem;
+}
+.cardscontainer
+{
+    display: flex;
+    flex-wrap: wrap;/*this is used when the elements dont fit in a single line it shifts the elements to next line without changing the shape of the elements*/
+}
+.card-img
+{
+    width:100%;
+    border-radius: 0.5rem;
+}
+.cardtitle
+{
+    font-weight:700;
+}
+.cardinfo
+{
+    font-size: 0.75;
+    opacity: 0.8;
+}
+.footer
+{
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.line
+{
+    width: 90%;
+    height: 50%;
+    border-top: 1px solid white;
+    opacity: 0.4;
+}
+.album
+{
+    width: 25%;
+}
+.player
+{
+    width: 50% ;   
+}
+.controls
+{
+    width: 25%;
+}
+.playercontrols
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.playericoncontrols
+{
+    opacity: 0.7;
+    height: 1rem;
+    margin-right: 2rem;
+}
+.playericoncontrols:hover
+{
+    opacity: 1;
+}
+.playbackbar
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.progressbar
+{
+    width: 70%;
+    appearance: none;/*This property is used to set the all values that the progress  bar is given by chrome to none and will make the progress bar look completely raw without any styling and now we can style it*/
+    background-color: transparent;
+    cursor: pointer;/*This wil make the arrow of our mouse look like the hand pointer when try to move the progressbar*/
+}
+.progressbar::-webkit-slider-runnable-track
+{
+    background-color: #ddd;
+    border-radius: 2rem;
+    height: 0.2rem;
+}
+.progressbar::-webkit-slider-thumb
+{
+    appearance: none;
+    height: 1rem;
+    width: 1rem;
+    background-color: white;
+    border-radius: 10rem;
+    margin-top: -6px;
+}
+.album
+{
+    height: 72px;
+}
+.controls
+{
+    display: flex;
+    justify-content: space-between;
+    height: 40px;
+}
+.queue
+{
+    height: 35px;
+
+}
+
+
